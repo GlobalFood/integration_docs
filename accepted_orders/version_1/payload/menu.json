@@ -1,0 +1,261 @@
+{
+    "id": 4108,
+    "restaurant_id": 4172,
+    "active": true,
+    "currency": "USD",
+    "categories": [
+        {
+            "id": 14937,
+            "menu_id": 4108,
+            "name": "Pizza",
+            "active": true,
+            "active_begin": null,
+            "active_end": null,
+            "active_days": 127,
+            "sort": 0,
+            "picture_id": 2939,
+            "items": [
+                {
+                    "id": 58424,
+                    "menu_category_id": 14937,
+                    "name": "Pizza Margherita",
+                    "description": "(tomato sauce, cheese)",
+                    "price": 7,
+                    "active": true,
+                    "active_begin": null,
+                    "active_end": null,
+                    "active_days": 127,
+                    "sort": 0,
+                    "sizes": [
+                        {
+                            "id": 37086,
+                            "menu_item_id": 58424,
+                            "name": "Small",
+                            "price": 0,
+                            "default": true,
+                            "groups": [
+                                {
+                                    "id": 16978,
+                                    "menu_id": 4108,
+                                    "name": "Extra Toppings (Small)",
+                                    "sort": 0,
+                                    "required": false,
+                                    "force_min": 1,
+                                    "force_max": 1,
+                                    "allow_quantity": false,
+                                    "options": [
+                                        {
+                                            "id": 51188,
+                                            "option_group_id": 16978,
+                                            "name": "Corn",
+                                            "price": 0.7,
+                                            "default": false
+                                        },
+                                        {
+                                            "id": 51189,
+                                            "option_group_id": 16978,
+                                            "name": "Extra mozzarella",
+                                            "price": 1.2,
+                                            "default": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 37087,
+                            "menu_item_id": 58424,
+                            "name": "Large",
+                            "price": 2,
+                            "default": false,
+                            "groups": [
+                                {
+                                    "id": 16979,
+                                    "menu_id": 4108,
+                                    "name": "Extra Toppings (Large)",
+                                    "sort": 0,
+                                    "required": false,
+                                    "force_min": 1,
+                                    "force_max": 1,
+                                    "allow_quantity": false,
+                                    "options": [
+                                        {
+                                            "id": 51190,
+                                            "option_group_id": 16979,
+                                            "name": "Corn",
+                                            "price": 1.2,
+                                            "default": false
+                                        },
+                                        {
+                                            "id": 51191,
+                                            "option_group_id": 16979,
+                                            "name": "Extra mozzarella",
+                                            "price": 1.7,
+                                            "default": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "groups": []
+                },
+                {
+                    "id": 58425,
+                    "menu_category_id": 14937,
+                    "name": "Pizza Prosciutto",
+                    "description": "(tomato sauce, cheese, ham)",
+                    "price": 8,
+                    "active": true,
+                    "active_begin": null,
+                    "active_end": null,
+                    "active_days": 127,
+                    "sort": 0,
+                    "sizes": [
+                        {
+                            "id": 37088,
+                            "menu_item_id": 58425,
+                            "name": "Small",
+                            "price": 0,
+                            "default": true,
+                            "groups": [
+                                {
+                                    "id": 16978,
+                                    "menu_id": 4108,
+                                    "name": "Extra Toppings (Small)",
+                                    "sort": 0,
+                                    "required": false,
+                                    "force_min": 1,
+                                    "force_max": 1,
+                                    "allow_quantity": false,
+                                    "options": [
+                                        {
+                                            "id": 51188,
+                                            "option_group_id": 16978,
+                                            "name": "Corn",
+                                            "price": 0.7,
+                                            "default": false
+                                        },
+                                        {
+                                            "id": 51189,
+                                            "option_group_id": 16978,
+                                            "name": "Extra mozzarella",
+                                            "price": 1.2,
+                                            "default": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 37089,
+                            "menu_item_id": 58425,
+                            "name": "Large",
+                            "price": 2,
+                            "default": false,
+                            "groups": [
+                                {
+                                    "id": 16979,
+                                    "menu_id": 4108,
+                                    "name": "Extra Toppings (Large)",
+                                    "sort": 0,
+                                    "required": false,
+                                    "force_min": 1,
+                                    "force_max": 1,
+                                    "allow_quantity": false,
+                                    "options": [
+                                        {
+                                            "id": 51190,
+                                            "option_group_id": 16979,
+                                            "name": "Corn",
+                                            "price": 1.2,
+                                            "default": false
+                                        },
+                                        {
+                                            "id": 51191,
+                                            "option_group_id": 16979,
+                                            "name": "Extra mozzarella",
+                                            "price": 1.7,
+                                            "default": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "groups": []
+                }
+            ],
+            "groups": [
+                {
+                    "id": 16977,
+                    "menu_id": 4108,
+                    "name": "Crust",
+                    "sort": 0,
+                    "required": true,
+                    "force_min": 1,
+                    "force_max": 1,
+                    "allow_quantity": false,
+                    "options": [
+                        {
+                            "id": 51186,
+                            "option_group_id": 16977,
+                            "name": "Fluffy",
+                            "price": 0,
+                            "default": true
+                        },
+                        {
+                            "id": 51187,
+                            "option_group_id": 16977,
+                            "name": "Crispy",
+                            "price": 0,
+                            "default": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 14938,
+            "menu_id": 4108,
+            "name": "Pasta",
+            "active": true,
+            "active_begin": null,
+            "active_end": null,
+            "active_days": 127,
+            "sort": 0,
+            "picture_id": 2967,
+            "items": [
+                {
+                    "id": 58426,
+                    "menu_category_id": 14938,
+                    "name": "Spaghetti Bolognese",
+                    "description": "",
+                    "price": 9,
+                    "active": true,
+                    "active_begin": null,
+                    "active_end": null,
+                    "active_days": 127,
+                    "sort": 0,
+                    "sizes": [],
+                    "groups": []
+                },
+                {
+                    "id": 58427,
+                    "menu_category_id": 14938,
+                    "name": "Spaghetti Frutti di Mare",
+                    "description": "(with sea food)",
+                    "price": 12,
+                    "active": true,
+                    "active_begin": null,
+                    "active_end": null,
+                    "active_days": 127,
+                    "sort": 0,
+                    "sizes": [],
+                    "groups": []
+                }
+            ],
+            "groups": []
+        }
+    ]
+}
