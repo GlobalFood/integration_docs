@@ -21,7 +21,7 @@ curl "https://pos.globalfoodsoft.com/pos/menu" \
    -H "Glf-Api-Version: 1"
 ```
 
-See [menu.json](payload/menu.json) for response payload
+See [menu.json](./payload/menu.json) for response payload
 
 ### Example using XML
 ```
@@ -32,7 +32,7 @@ curl "https://pos.globalfoodsoft.com/pos/menu" \
    -H "Glf-Api-Version: 1"
 ```
 
-See [menu.xml](payload/menu.xml) for response payload
+See [menu.xml](./payload/menu.xml) for response payload
 
    
 

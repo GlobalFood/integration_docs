@@ -39,7 +39,7 @@ We will call
 ```
 POST https://www.your-domain.com/integration/orderingsystem
 ```
-with the payload found in [orders.json](payload/orders.json)
+with the payload found in [orders.json](./payload/orders.json)
 
 
 
@@ -49,7 +49,7 @@ We will call
  ```
 POST https://www.your-domain.com/integration/orderingsystem
 ```
-with the payload found in [orders.xml](payload/orders.xml)
+with the payload found in [orders.xml](./payload/orders.xml)
 
 
 Poll (Local system)
@@ -80,7 +80,7 @@ curl "https://pos.globalfoodsoft.com/pos/order/pop" \
    -H "Glf-Api-Version: 2"
 ```
 
-See [orders.json](payload/orders.json) for response payload
+See [orders.json](./payload/orders.json) for response payload
 
 
 ### Example using XML
@@ -92,7 +92,7 @@ curl "https://pos.globalfoodsoft.com/pos/order/pop" \
    -H "Glf-Api-Version: 2"
 ```
 
-See [orders.xml](payload/orders.xml) for response payload
+See [orders.xml](./payload/orders.xml) for response payload
 
 
 Order fields
