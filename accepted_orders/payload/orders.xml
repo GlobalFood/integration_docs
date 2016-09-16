@@ -24,6 +24,7 @@
         <restaurant_zipcode>1234678</restaurant_zipcode>
         <restaurant_latitude>37.7944872589999</restaurant_latitude>
         <restaurant_longitude>-122.395311999999</restaurant_longitude>
+        <restaurant_timezone>America/Los_Angeles</restaurant_timezone>
         <instructions/>
         <currency>USD</currency>
         <latitude>37.79448725889753</latitude>

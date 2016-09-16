@@ -140,6 +140,7 @@ The fields of an order are:
 |restaurant_street    |string|       street of the restaurant|
 |restaurant_latitude  |string|       latitude of the restaurant|
 |restaurant_longitude |string|       longitude of the restaurant|
+|restaurant_timezone  |string|       timezone of restaurant; this is set automatically when you set the exact location in the Admin panel|
 |restaurant_key       |string|       authorization key of the restaurant|
 |restaurant_token     |string|       token or id of the corresponding restaurant in your system; this is set by adding it to the integration in the Admin panel|
 |currency             |string|       three letter currency code <br>e.g. 'USD'|
