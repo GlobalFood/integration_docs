@@ -127,7 +127,7 @@ The fields of an order are:
 |api_version        |integer|      version of the accepted orders api|
 |type               |string|       'pickup' or 'delivery'|
 |pickup_payment     |string or null|  payment method used when type is 'pickup', null otherwise; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
-|delivery_payment   |string or null|  payment method used when type is 'delivery', null otherwise; can be:: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
+|delivery_payment   |string or null|  payment method used when type is 'delivery', null otherwise; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
 |fulfill_time       |string|       UTC date string of when the order will be delivered or picked up|
 |instructions       |string or null|  order instructions|
 |restaurant_id      |integer|      restaurant id|
@@ -141,6 +141,7 @@ The fields of an order are:
 |client_email       |string|       client email|
 |client_phone       |string|       client phone|
 |client_address     |string|       client delivery address; it's an empty string when order is pickup
+|client_address_parts |object|     client delivery address components; can contain the following components: <br> street <br> bloc <br> intercom <br> more_address - in case extended address is not enabled <br> zipcode <br> city <br> full_address - legacy orders or order is pickup
 |latitude           |string or null|  latitude of the client delivery address; null when order type is pickup|
 |longitude          |string or null|  longitude of the client delivery address; null when order type is pickup|
 |total_price        |float|        total including taxes|
