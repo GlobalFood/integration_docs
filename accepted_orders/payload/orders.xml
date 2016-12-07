@@ -37,7 +37,11 @@
         <restaurant_token>id-9389</restaurant_token>
         <api_version>2</api_version>
         <payment>ONLINE</payment>
-        <client_address>21 Market Street, San Francisco</client_address>
+        <client_address>21st Market Street, San Francisco</client_address>
+        <client_address_parts>
+            <street>21st Market Street</street>
+            <city>San Francisco</city>
+        </client_address_parts>
         <item>
             <id>1678363</id>
             <name>DELIVERY_FEE</name>

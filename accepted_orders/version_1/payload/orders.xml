@@ -22,7 +22,11 @@
         <client_last_name>Draper</client_last_name>
         <client_email>don.draper@globalfoodsoft.com</client_email>
         <client_phone>+15551234567</client_phone>
-        <client_address>21 Market Street, San Francisco</client_address>
+        <client_address>21st Market Street, San Francisco</client_address>
+        <client_address_parts>
+            <street>21st Market Street</street>
+            <city>San Francisco</city>
+        </client_address_parts>
         <restaurant_name>John's Excellent Pizza</restaurant_name>
         <instructions/>
         <postpone>0</postpone>

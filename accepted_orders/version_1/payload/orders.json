@@ -23,7 +23,11 @@
             "client_last_name": "Draper",
             "client_email": "don.draper@globalfoodsoft.com",
             "client_phone": "+15551234567",
-            "client_address": "21 Market Street, San Francisco",
+            "client_address": "21st Market Street, San Francisco",
+            "client_address_parts": {
+                "street": "21st Market Street",
+                "city": "San Francisco"
+            },
             "restaurant_name": "John's Excellent Pizza",
             "instructions": null,
             "postpone": 0,

@@ -38,7 +38,11 @@
             "restaurant_token": "id-9389",
             "api_version": 2,
             "payment": "ONLINE",
-            "client_address": "21 Market Street, San Francisco",
+            "client_address": "21st Market Street, San Francisco",
+            "client_address_parts": {
+                "street": "21st Market Street",
+                "city": "San Francisco"
+            },
             "items": [
                 {
                     "id": 1678316,
