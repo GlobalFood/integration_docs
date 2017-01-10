@@ -141,7 +141,7 @@ The fields of an order are:
 |client_email       |string|       client email|
 |client_phone       |string|       client phone|
 |client_address     |string|       client delivery address; it's an empty string when order is pickup
-|client_address_parts |object|     client delivery address components; can contain the following components: <br> street <br> bloc <br> intercom <br> more_address - in case extended address is not enabled <br> zipcode <br> city <br> full_address - legacy orders or order is pickup
+|client_address_parts |object|     client delivery address components; can contain the following components: <br> - street <br> - bloc <br> - floor <br> - apartment <br> - intercom <br> - more_address (in case extended address is not enabled) <br> - zipcode <br> - city <br> - full_address (legacy orders or order is pickup)
 |latitude           |string or null|  latitude of the client delivery address; null when order type is pickup|
 |longitude          |string or null|  longitude of the client delivery address; null when order type is pickup|
 |total_price        |float|        total including taxes|
