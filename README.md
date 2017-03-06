@@ -1,8 +1,10 @@
 GlobalFood Integration APIs
 =====================================
 
-We support two integration APIs:
+Supported integration APIs:
 
-- Accepted Orders API. For documentation go [here](./accepted_orders/README.md).
+- Accept Orders API. For documentation go [here](./accepted_orders/README.md).
+
+- Fetch Menu API. For documentation go [here](./fetch_menu/README.md).
 
 - Client Payments API. For documentation go [here](./client_payments/README.md).

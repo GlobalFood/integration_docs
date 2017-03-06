@@ -1,7 +1,13 @@
-Fetching the restaurant's menu
+Fetching the restaurant's menu API (Version 2)
 =============================
 
-We need to provide you a secret key to allow you to poll our system. This key must be sent in the "Authorization" header of the request. This key is unique for every restaurant location. (Example: 8yCPCvb3dDo1k). We will provide you this key manually via email once you have created that restaurant in our system. Simply tell us the email address that you used to create the account with in our system.
+We need to provide you a secret key to allow you to poll our system. This key must be sent in the "Authorization" header of the request. This key is unique for every restaurant location. (Example: 8yCPCvb3dDo1k). 
+
+You may create this key from the Restaurant Admin Panel -> Others (Search for the ... icon) -> 3rd party integrations -> Enabled integrations menu.
+
+Select the template "Fetch Menu" and generate the key.
+
+
 
 Making the request
 ------------------
@@ -120,3 +126,7 @@ The fields of an option are:
 |name          |string|      name of the option|
 |price         |float|       price of the option|
 |default       |boolean|     if this option is the default option inside the group|
+
+NOTES: 
+* The key generated using the  "Fetch Menu" template doesn't grant you access to the Accepted Orders API. More details of how to get an order once it was accepted [here](../accepted_orders/README.md). 
+* We no longer update the version 1 documentation. To make use of newer features please upgrade to Version 2. For the deprecated Version 1 documentation, you can go [here](../accepted_orders/version_1/README.md). 
