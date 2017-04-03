@@ -98,6 +98,7 @@
                 <price>0</price>
                 <group_name>Size</group_name>
                 <quantity>1</quantity>
+                <type_id>37086</type_id>
                 <type>size</type>
             </option>
             <option>
@@ -106,6 +107,7 @@
                 <price>0</price>
                 <group_name>Crust</group_name>
                 <quantity>1</quantity>
+                <type_id>51187</type_id>
                 <type>option</type>
             </option>
             <option>
@@ -114,6 +116,7 @@
                 <price>1.2</price>
                 <group_name>Extra Toppings (Small)</group_name>
                 <quantity>1</quantity>
+                <type_id>51189</type_id>
                 <type>option</type>
             </option>
         </item>
@@ -139,6 +142,7 @@
                 <price>2</price>
                 <group_name>Size</group_name>
                 <quantity>1</quantity>
+                <type_id>37089</type_id>
                 <type>size</type>
             </option>
             <option>
@@ -147,6 +151,7 @@
                 <price>0</price>
                 <group_name>Crust</group_name>
                 <quantity>1</quantity>
+                <type_id>51187</type_id>
                 <type>option</type>
             </option>
             <option>
@@ -155,6 +160,7 @@
                 <price>1.7</price>
                 <group_name>Extra Toppings (Large)</group_name>
                 <quantity>1</quantity>
+                <type_id>51191</type_id>
                 <type>option</type>
             </option>
         </item>
@@ -180,6 +186,7 @@
                 <price>0</price>
                 <group_name>Size</group_name>
                 <quantity>1</quantity>
+                <type_id>37088</type_id>
                 <type>size</type>
             </option>
             <option>
@@ -188,6 +195,7 @@
                 <price>0</price>
                 <group_name>Crust</group_name>
                 <quantity>1</quantity>
+                <type_id>51186</type_id>
                 <type>option</type>
             </option>
             <option>
@@ -196,6 +204,7 @@
                 <price>0.7</price>
                 <group_name>Extra Toppings (Small)</group_name>
                 <quantity>1</quantity>
+                <type_id>51188</type_id>
                 <type>option</type>
             </option>
         </item>

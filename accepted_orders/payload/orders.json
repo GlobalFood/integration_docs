@@ -103,6 +103,7 @@
                             "price": 0,
                             "group_name": "Size",
                             "quantity": 1,
+                            "type_id": 37086,
                             "type": "size"
                         },
                         {
@@ -111,6 +112,7 @@
                             "price": 0,
                             "group_name": "Crust",
                             "quantity": 1,
+                            "type_id": 51187,
                             "type": "option"
                         },
                         {
@@ -119,6 +121,7 @@
                             "price": 1.2,
                             "group_name": "Extra Toppings (Small)",
                             "quantity": 1,
+                            "type_id": 51189,
                             "type": "option"
                         }
                     ]
@@ -146,6 +149,7 @@
                             "price": 2,
                             "group_name": "Size",
                             "quantity": 1,
+                            "type_id": 37089,
                             "type": "size"
                         },
                         {
@@ -154,6 +158,7 @@
                             "price": 0,
                             "group_name": "Crust",
                             "quantity": 1,
+                            "type_id": 51187,
                             "type": "option"
                         },
                         {
@@ -162,6 +167,7 @@
                             "price": 1.7,
                             "group_name": "Extra Toppings (Large)",
                             "quantity": 1,
+                            "type_id": 51191,
                             "type": "option"
                         }
                     ]
@@ -189,6 +195,7 @@
                             "price": 0,
                             "group_name": "Size",
                             "quantity": 1,
+                            "type_id": 37088,
                             "type": "size"
                         },
                         {
@@ -197,6 +204,7 @@
                             "price": 0,
                             "group_name": "Crust",
                             "quantity": 1,
+                            "type_id": 51186,
                             "type": "option"
                         },
                         {
@@ -205,6 +213,7 @@
                             "price": 0.7,
                             "group_name": "Extra Toppings (Small)",
                             "quantity": 1,
+                            "type_id": 51188,
                             "type": "option"
                         }
                     ]

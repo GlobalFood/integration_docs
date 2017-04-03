@@ -198,5 +198,6 @@ The fields of an item option are:
 |name             |string|        item option name|
 |group_name       |string|        name of the option group <br>e.g. name of option is Ketchup, group_name is Sauces|
 |type             |string|        item option type; can be either 'option' or 'size'|
+|type_id          |integer|       id of the original item option or size|
 |quantity         |integer|       quantity of the item option|
 |price            |float|         base price of the item option, does not use quantity|
