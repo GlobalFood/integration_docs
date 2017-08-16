@@ -162,7 +162,7 @@ The fields of an order are:
 |tax_type             |string|       how the default taxation is applied, can be either 'NET' or 'GROSS'|
 |tax_value            |float|        total value of all the taxes|
 |tax_name             |string|       name of default tax  <br>e.g. 'VAT', 'Sales Tax'|
-|coupons              |array of strings| list of coupon codes applied on the order|
+|coupons              |array of integers|  list of promotion ids corresponding to coupon codes used during the ordering process (including those which were not applied in the end)|
 |items                |array of order items| list of order items|
 
 
