@@ -164,6 +164,7 @@ The fields of an order are:
 |tax_name             |string|       name of default tax  <br>e.g. 'VAT', 'Sales Tax'|
 |coupons              |array of integers|  list of promotion ids corresponding to coupon codes used during the ordering process (including those which were not applied in the end)|
 |items                |array of order items| list of order items|
+|reference            |string|       reference string that was used when opening ordering|
 
 
 ### Order Items
@@ -188,6 +189,7 @@ The fields of an order item are:
 |cart_discount    |float|         discount applied to the item as a result of cart promotions|
 |cart_discount_rate  |float|      rate used to apply all of the cart promotions; if you have multiple cart promotions (type is 'promo_cart) then their rates are added up here|
 |options          |array of item options| list of item options like sizes, toppings or addons|
+|coupon           |string|        in case item is 'promo_cart' or 'promo_item' this is the coupon code of the promotion |
 
 
 
