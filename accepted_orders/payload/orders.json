@@ -7,6 +7,7 @@
             "restaurant_id": 4172,
             "client_id": 188995,
             "type": "delivery",
+            "persons": 0,
             "source": "website",
             "sub_total_price": 47.88,
             "tax_value": 4.13,

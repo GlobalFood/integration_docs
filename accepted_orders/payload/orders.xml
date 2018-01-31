@@ -6,6 +6,7 @@
         <restaurant_id>4172</restaurant_id>
         <client_id>188995</client_id>
         <type>delivery</type>
+        <persons>0</persons>
         <source>website</source>
         <sub_total_price>47.88</sub_total_price>
         <tax_value>4.13</tax_value>
