@@ -132,7 +132,9 @@ The fields of an order are:
 |persons              |integer|      number of people at table for a table reservation or order ahead; always 0 in case of pickup or delivery|
 |source               |string|       source of the order; can be: <br> 'website' - restaurant website on desktop browser <br> 'mobile_widget' - restaurant website on a mobile browser <br> 'facebook' - facebook page of the restaurant <br> 'facebook_website' - facebook share page on a desktop browser <br> 'facebook_mobile_widget' - facebook share page on a mobile browser|
 |payment              |string|       payment method used; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
+|accepted_at          |string|       UTC date string of when the order was accepted|
 |fulfill_at           |string|       UTC date string of when the order will be delivered or picked up|
+|for_later            |boolean|      Flag to signal if the order is for a future specific time(true) or on demand, to be delivered or picked up as soon as possible(false)|
 |instructions         |string or null|  order instructions|
 |restaurant_id        |integer|      restaurant id|
 |restaurant_name      |string|       name of the restaurant|

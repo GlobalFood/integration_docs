@@ -34,6 +34,8 @@
             "tax_type": "NET",
             "tax_name": "Sales Tax",
             "fulfill_at": "2016-02-03T17:19:32.000Z",
+            "for_later": false,
+            "accepted_at": "2016-02-03T16:19:32.000Z",
             "pos_system_id": 1,
             "restaurant_key": "8yCPCvb3dDo1k",
             "restaurant_token": "id-9389",

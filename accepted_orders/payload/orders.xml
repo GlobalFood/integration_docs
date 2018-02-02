@@ -33,6 +33,8 @@
         <tax_type>NET</tax_type>
         <tax_name>Sales Tax</tax_name>
         <fulfill_at>2016-02-03T17:22:07.000Z</fulfill_at>
+        <for_later>false</for_later>
+        <accepted_at>2016-02-03T16:22:07.000Z</accepted_at>
         <pos_system_id>1</pos_system_id>
         <restaurant_key>8yCPCvb3dDo1k</restaurant_key>
         <restaurant_token>id-9389</restaurant_token>
