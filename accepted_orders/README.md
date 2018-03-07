@@ -157,7 +157,7 @@ The fields of an order are:
 |client_phone         |string|       client phone|
 |client_address       |string or null|  client delivery address; it's null when order is pickup|
 |client_address_parts |object or null|     client delivery address components; it's null when order is pickup; can contain the following components: <br> - street <br> - bloc <br> - floor <br> - apartment <br> - intercom <br> - more_address (in case extended address is not enabled) <br> - zipcode <br> - city <br> - full_address (legacy orders)
-|pin_skipped          |integer|  pin_skipped can be: <br> 0 - inserted address was translated into latitude & longitude using using Google API. The food client fine-tuned the pin on the map manually to achieve high accuracy. <br> 1 - inserted address was translated into latitude & longitude using using Google API. The food client however skipped fine-tuning the pin on the map thus latitude & longitude values may not be accurate|
+|pin_skipped          |boolean|  pin_skipped can be: <br> false - inserted address was translated into latitude & longitude using using Google API. The food client fine-tuned the pin on the map manually to achieve high accuracy. <br> true - inserted address was translated into latitude & longitude using using Google API. The food client however skipped fine-tuning the pin on the map thus latitude & longitude values may not be accurate|
 |latitude             |string or null|  latitude of the client delivery address; null when order type is pickup|
 |longitude            |string or null|  longitude of the client delivery address; null when order type is pickup|
 |total_price          |float|        total including taxes|

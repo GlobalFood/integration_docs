@@ -16,7 +16,7 @@
             "client_last_name": "Draper",
             "client_email": "don.draper@globalfoodsoft.com",
             "client_phone": "+15551234567",
-            "pin_skipped": 0,
+            "pin_skipped": false,
             "restaurant_name": "John's Excellent Pizza",
             "restaurant_phone": "+15558964567",
             "restaurant_country": "United States of America",

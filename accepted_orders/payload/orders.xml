@@ -15,7 +15,7 @@
         <client_last_name>Draper</client_last_name>
         <client_email>don.draper@globalfoodsoft.com</client_email>
         <client_phone>+15551234567</client_phone>
-        <pin_skipped>0</pin_skipped>
+        <pin_skipped>false</pin_skipped>
         <restaurant_name>John's Excellent Pizza</restaurant_name>
         <restaurant_phone>+15558964567</restaurant_phone>
         <restaurant_country>United States of America</restaurant_country>
