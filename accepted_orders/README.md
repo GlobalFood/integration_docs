@@ -27,7 +27,7 @@ This type of integration is recommended for systems with a centralized architect
 
 **Map orders to correct restaurants:**
 
-You need to identify which restaurant you need to assign an order to. Every order that we push to you contains the <restaurant_key> parameter which is unique to each restaurant location. We will provide you this key manually via email once you have created that restaurant in our system. Simply tell us the email address that you used to create the account within our system. You can see in the XML & JSON example below that the example key is 8yCPCvb3dDo1k.
+You need to identify which restaurant you need to assign an order to. Every order that we push to you contains the <restaurant_key> parameter which is unique to each restaurant location. To get your own key, navigate to the integrations section and add an integration using the "Push Accepted Order" template. You should see the key in the integrations listing after adding it. You can see in the XML & JSON example below that the example key is 8yCPCvb3dDo1k.
 
 
 
@@ -63,7 +63,7 @@ This type of integration is recommended for systems with a decentralized archite
 
 **We need to provide you:**
 
-A secret key to allow you to poll our system. This key must be sent in the "Authorization" header of the request. This key is unique for every restaurant location. (Example: 8yCPCvb3dDo1k). We will provide you this key manually via email once you have created that restaurant in our system. Simply tell us the email address that you used to create the account with in our system.
+A secret key to allow you to poll our system. This key must be sent in the "Authorization" header of the request. This key is unique for every restaurant location. (Example: 8yCPCvb3dDo1k). To get your own key, navigate to the integrations section and add an integration using the "Poll Accepted Order v2" template. You should see the key in the integrations listing after adding it
 
 
 **Polling:**
