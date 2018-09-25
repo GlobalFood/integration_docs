@@ -13,7 +13,7 @@ GlobalFood offers two integration methods for getting new orders:
 Push (Cloud system)
 ----------------------
 
-This type of integration is recommended for systems with a centralized architecture. In this scenario an endpoint is notified via webhook that one or more orders have been accepted for one or more of the system's client restaurants.
+This type of integration is recommended for systems with a centralized architecture. In this scenario, an endpoint is notified via webhook that one or more orders have been accepted for one or more of the system's client restaurants.
 
 
 **You need to provide us with:**
@@ -34,6 +34,13 @@ You need to identify which restaurant you need to assign an order to. Every orde
 **Add optional security:**
 
 By default we send a master key alongside each request in the "Authorization" (example: e6fIguVkyG5xtT3BYGMI4rfm9iVt24YJ) header of the request. This key can be used by you to verify that the sender is us. Otherwise any third party that knows your URL https://www.your-domain.com/integration/orderingsystem could try to push a "fake" order.
+
+
+**WARNINGS:**
+
+1. The endpoint called by our system MUST reply within a maximum of 15 seconds.
+
+2. In some rare cases, it is possible to receive two notifications for the same order. This means that the notifications contain the same order id and pos_system_id. You MUST implement a protection against this special case.
 
 
 ### Example using JSON
