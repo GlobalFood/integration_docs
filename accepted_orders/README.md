@@ -143,7 +143,8 @@ The fields of an order are:
 |fulfill_at           |string|       UTC date string of when the order will be delivered or picked up|
 |for_later            |boolean|      Flag to signal if the order is for a future specific time(true) or on demand, to be delivered or picked up as soon as possible(false)|
 |instructions         |string or null|  order instructions|
-|restaurant_id        |integer|      restaurant id|
+|restaurant_id        |integer|      restaurant ID|
+|company_account_id   |integer|      company account ID - A multi-chain restaurant may have different locations but all managed under one unique company account login. Restaurant ID is unique per location. This company account ID is unique for the entire chain.|
 |restaurant_name      |string|       name of the restaurant|
 |restaurant_phone     |string|       phone of the restaurant|
 |restaurant_country   |string|       country of the restaurant|
