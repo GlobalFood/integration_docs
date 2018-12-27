@@ -173,9 +173,20 @@ The fields of an order are:
 |tax_type             |string|       how the default taxation is applied, can be either 'NET' or 'GROSS'|
 |tax_value            |float|        total value of all the taxes|
 |tax_name             |string|       name of default tax  <br>e.g. 'VAT', 'Sales Tax'|
+|tax_list             |array of aggregated taxes|  list of aggregated taxes (by type and by rate) for order items |
 |coupons              |array of integers|  list of promotion ids corresponding to coupon codes used during the ordering process (including those which were not applied in the end)|
 |items                |array of order items| list of order items|
 |reference            |string|       reference string that was used when opening ordering|
+
+
+### Aggregated taxes
+
+The fields of an aggregated tax are
+|Field|Type|Description|
+|---|---|---|
+|type         |string|        type of aggregated tax; can be: <br>- 'item' - taxes for menu items <br>- 'delivery_fee' - taxes for the delivery fee <br>- 'tip' - taxes for the tip |
+|value        |float|         value of the taxes |
+|rate         |float|         rate used to calculate taxes |
 
 
 ### Order Items
