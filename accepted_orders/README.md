@@ -181,7 +181,8 @@ The fields of an order are:
 
 ### Aggregated taxes
 
-The fields of an aggregated tax are
+The fields of an aggregated tax are:
+
 |Field|Type|Description|
 |---|---|---|
 |type         |string|        type of aggregated tax; can be: <br>- 'item' - taxes for menu items <br>- 'delivery_fee' - taxes for the delivery fee <br>- 'tip' - taxes for the tip |
