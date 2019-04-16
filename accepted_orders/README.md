@@ -170,7 +170,7 @@ The fields of an order are:
 |longitude            |string or null|  longitude of the client delivery address; null when order type is pickup|
 |total_price          |float|        total including taxes|
 |sub_total_price      |float|        sub-total, not including tip, delivery fee and, only in 'NET' tax calculations, taxes on items|
-|tax_type             |string|       how the default taxation is applied, can be either 'NET' or 'GROSS'|
+|tax_type             |string|       how taxation is applied, can be either 'NET' or 'GROSS' (NOTE: the tip is always taxed as GROSS)|
 |tax_value            |float|        total value of all the taxes|
 |tax_name             |string|       name of default tax  <br>e.g. 'VAT', 'Sales Tax'|
 |tax_list             |array of aggregated taxes|  list of aggregated taxes (by type and by rate) for order items |
@@ -203,9 +203,9 @@ The fields of an order item are:
 |type_id          |integer or null|  id of the original menu item or promotion used to create the order item; it's null for 'delivery_fee' and 'tip'|
 |parent_id        |integer or null|  usually null except if the id of the parent order item has the following two conditions: item is of type 'item' and it belongs to another item of type 'promo_item'|
 |total_item_price |float|         total price of the item taking into account quantity and options. In case type is 'promo_item' then it uses the child order items. In any case it does not include discounts|
-|tax_type         |string|        how taxation is applied, can be either 'NET' or 'GROSS'|
-|tax_value        |float|         value of the taxes; not calculated on items of type 'item' if they are children of type 'promo_item'; it's not calculated if type is 'promo_cart'|
-|tax_rate         |float|         rate used to calculate taxes; can be different for any item|
+|tax_type         |string|        (DEPRECATED: use order.tax_list) how taxation is applied, can be either 'NET' or 'GROSS'|
+|tax_value        |float|         (DEPRECATED: use order.tax_list) value of the taxes; not calculated on items of type 'item' if they are children of type 'promo_item'; it's not calculated if type is 'promo_cart'|
+|tax_rate         |float|         (DEPRECATED: use order.tax_list) rate used to calculate taxes; can be different for any item|
 |price            |float|         base price of the item, no quantity and no options; if tax_type is 'GROSS' then it also includes the tax_value|
 |quantity         |integer|       quantity of the item|
 |item_discount    |float|         discount applied to the item as a result of item promotions OR the total discount of an item of type 'promo_cart'|
