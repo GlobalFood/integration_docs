@@ -13,7 +13,7 @@ GlobalFood offers two integration methods for getting new orders:
 Push (Cloud system)
 ----------------------
 
-This type of integration is recommended for systems with a centralized architecture. In this scenario an endpoint is notified via webhook that one or more orders have been accepted for one or more of the system's client restaurants.
+This type of integration is recommended for systems with a centralized architecture. In this scenario, an endpoint is notified via webhook that one or more orders have been accepted for one or more of the system's client restaurants.
 
 
 **You need to provide us with:**
@@ -27,13 +27,20 @@ This type of integration is recommended for systems with a centralized architect
 
 **Map orders to correct restaurants:**
 
-You need to identify which restaurant you need to assign an order to. Every order that we push to you contains the <restaurant_key> parameter which is unique to each restaurant location. We will provide you this key manually via email once you have created that restaurant in our system. Simply tell us the email address that you used to create the account within our system. You can see in the XML & JSON example below that the example key is 8yCPCvb3dDo1k.
+You need to identify which restaurant you need to assign an order to. Every order that we push to you contains the <restaurant_key> parameter which is unique to each restaurant location. To get your own key, navigate to the integrations section and add an integration using the "Push Accepted Order" template. You should see the key in the integrations listing after adding it. You can see in the XML & JSON example below that the example key is 8yCPCvb3dDo1k.
 
 
 
 **Add optional security:**
 
 By default we send a master key alongside each request in the "Authorization" (example: e6fIguVkyG5xtT3BYGMI4rfm9iVt24YJ) header of the request. This key can be used by you to verify that the sender is us. Otherwise any third party that knows your URL https://www.your-domain.com/integration/orderingsystem could try to push a "fake" order.
+
+
+**WARNINGS:**
+
+1. The endpoint called by our system MUST reply within a maximum of 15 seconds.
+
+2. In some rare cases, it is possible to receive two notifications for the same order. This means that the notifications contain the same order id and pos_system_id. You MUST implement a protection against this special case.
 
 
 ### Example using JSON
@@ -63,7 +70,7 @@ This type of integration is recommended for systems with a decentralized archite
 
 **We need to provide you:**
 
-A secret key to allow you to poll our system. This key must be sent in the "Authorization" header of the request. This key is unique for every restaurant location. (Example: 8yCPCvb3dDo1k). We will provide you this key manually via email once you have created that restaurant in our system. Simply tell us the email address that you used to create the account with in our system.
+A secret key to allow you to poll our system. This key must be sent in the "Authorization" header of the request. This key is unique for every restaurant location. (Example: 8yCPCvb3dDo1k). To get your own key, navigate to the integrations section and add an integration using the "Poll Accepted Order v2" template. You should see the key in the integrations listing after adding it
 
 
 **Polling:**
@@ -128,12 +135,16 @@ The fields of an order are:
 |---|---|---|
 |id                   |integer|      order id|
 |api_version          |integer|      version of the accepted orders api|
-|type                 |string|       'pickup' or 'delivery'|
-|source               |string|       source of the order; can be: <br> 'website' - restaurant website on desktop browser <br> 'mobile_widget' - restaurant website on a mobile browser <br> 'facebook' - facebook page of the restaurant <br> 'facebook_website' - facebook share page on a desktop browser <br> 'facebook_mobile_widget' - facebook share page on a mobile browser|
+|type                 |string|       'pickup' or 'delivery' or 'table_reservation' or 'order_ahead'|
+|persons              |integer|      number of people at table for a table reservation or order ahead; always 0 in case of pickup or delivery|
+|source               |string|       source of the order; can be: <br> 'website' - restaurant website on desktop browser <br> 'mobile_web' - restaurant website on a mobile browser <br> 'facebook' - facebook app <br> 'website_facebook' - facebook share page on a desktop browser <br> 'mobile_web_facebook' - facebook share page on a mobile browser <br> 'android' - android portal app <br> 'android_branded' - android whitelabel app <br> 'ios' - ios portal app <br> 'ios_branded' - ios whitelabel app |
 |payment              |string|       payment method used; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
+|accepted_at          |string|       UTC date string of when the order was accepted|
 |fulfill_at           |string|       UTC date string of when the order will be delivered or picked up|
+|for_later            |boolean|      Flag to signal if the order is for a future specific time(true) or on demand, to be delivered or picked up as soon as possible(false)|
 |instructions         |string or null|  order instructions|
-|restaurant_id        |integer|      restaurant id|
+|restaurant_id        |integer|      restaurant ID|
+|company_account_id   |integer|      company account ID - A multi-chain restaurant may have different locations but all managed under one unique company account login. Restaurant ID is unique per location. This company account ID is unique for the entire chain.|
 |restaurant_name      |string|       name of the restaurant|
 |restaurant_phone     |string|       phone of the restaurant|
 |restaurant_country   |string|       country of the restaurant|
@@ -154,16 +165,29 @@ The fields of an order are:
 |client_phone         |string|       client phone|
 |client_address       |string or null|  client delivery address; it's null when order is pickup|
 |client_address_parts |object or null|     client delivery address components; it's null when order is pickup; can contain the following components: <br> - street <br> - bloc <br> - floor <br> - apartment <br> - intercom <br> - more_address (in case extended address is not enabled) <br> - zipcode <br> - city <br> - full_address (legacy orders)
-|pin_skipped          |integer|  pin_skipped can be: <br> 0 - inserted address was translated into latitude & longitude using using Google API. The food client fine-tuned the pin on the map manually to achieve high accuracy. <br> 1 - inserted address was translated into latitude & longitude using using Google API. The food client however skipped fine-tuning the pin on the map thus latitude & longitude values may not be accurate|
+|pin_skipped          |boolean|  pin_skipped can be: <br> false - inserted address was translated into latitude & longitude using using Google API. The food client fine-tuned the pin on the map manually to achieve high accuracy. <br> true - inserted address was translated into latitude & longitude using using Google API. The food client however skipped fine-tuning the pin on the map thus latitude & longitude values may not be accurate|
 |latitude             |string or null|  latitude of the client delivery address; null when order type is pickup|
 |longitude            |string or null|  longitude of the client delivery address; null when order type is pickup|
 |total_price          |float|        total including taxes|
 |sub_total_price      |float|        sub-total, not including tip, delivery fee and, only in 'NET' tax calculations, taxes on items|
-|tax_type             |string|       how the default taxation is applied, can be either 'NET' or 'GROSS'|
+|tax_type             |string|       how taxation is applied, can be either 'NET' or 'GROSS' (NOTE: the tip is always taxed as GROSS)|
 |tax_value            |float|        total value of all the taxes|
 |tax_name             |string|       name of default tax  <br>e.g. 'VAT', 'Sales Tax'|
-|coupons              |array of strings| list of coupon codes applied on the order|
+|tax_list             |array of aggregated taxes|  list of aggregated taxes (by type and by rate) for order items |
+|coupons              |array of integers|  list of promotion ids corresponding to coupon codes used during the ordering process (including those which were not applied in the end)|
 |items                |array of order items| list of order items|
+|reference            |string|       reference string that was used when opening ordering|
+
+
+### Aggregated taxes
+
+The fields of an aggregated tax are:
+
+|Field|Type|Description|
+|---|---|---|
+|type         |string|        type of aggregated tax; can be: <br>- 'item' - taxes for menu items <br>- 'delivery_fee' - taxes for the delivery fee <br>- 'tip' - taxes for the tip |
+|value        |float|         value of the taxes |
+|rate         |float|         rate used to calculate taxes |
 
 
 ### Order Items
@@ -175,19 +199,20 @@ The fields of an order item are:
 |id               |integer|       order item id|
 |name             |string|        order item name |
 |instructions     |string or null|   order item instructions|
-|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item)|
+|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item) <br> - 'promo_cart_item' - item promotion depending on cart value (which applies to items, when certain card conditions are met, like a minimum cart value) |
 |type_id          |integer or null|  id of the original menu item or promotion used to create the order item; it's null for 'delivery_fee' and 'tip'|
 |parent_id        |integer or null|  usually null except if the id of the parent order item has the following two conditions: item is of type 'item' and it belongs to another item of type 'promo_item'|
 |total_item_price |float|         total price of the item taking into account quantity and options. In case type is 'promo_item' then it uses the child order items. In any case it does not include discounts|
-|tax_type         |string|        how taxation is applied, can be either 'NET' or 'GROSS'|
-|tax_value        |float|         value of the taxes; not calculated on items of type 'item' if they are children of type 'promo_item'; it's not calculated if type is 'promo_cart'|
-|tax_rate         |float|         rate used to calculate taxes; can be different for any item|
+|tax_type         |string|        (DEPRECATED: use order.tax_list) how taxation is applied, can be either 'NET' or 'GROSS'|
+|tax_value        |float|         (DEPRECATED: use order.tax_list) value of the taxes; not calculated on items of type 'item' if they are children of type 'promo_item'; it's not calculated if type is 'promo_cart'|
+|tax_rate         |float|         (DEPRECATED: use order.tax_list) rate used to calculate taxes; can be different for any item|
 |price            |float|         base price of the item, no quantity and no options; if tax_type is 'GROSS' then it also includes the tax_value|
 |quantity         |integer|       quantity of the item|
 |item_discount    |float|         discount applied to the item as a result of item promotions OR the total discount of an item of type 'promo_cart'|
 |cart_discount    |float|         discount applied to the item as a result of cart promotions|
 |cart_discount_rate  |float|      rate used to apply all of the cart promotions; if you have multiple cart promotions (type is 'promo_cart) then their rates are added up here|
 |options          |array of item options| list of item options like sizes, toppings or addons|
+|coupon           |string|        in case item is 'promo_cart' or 'promo_item' this is the coupon code of the promotion |
 
 
 
@@ -201,6 +226,7 @@ The fields of an item option are:
 |name             |string|        item option name|
 |group_name       |string|        name of the option group <br>e.g. name of option is Ketchup, group_name is Sauces|
 |type             |string|        item option type; can be either 'option' or 'size'|
+|type_id          |integer|       id of the original option or size used to create the order option|
 |quantity         |integer|       quantity of the item option|
 |price            |float|         base price of the item option, does not use quantity|
 
