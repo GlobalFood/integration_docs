@@ -49,7 +49,7 @@ We will call
 ```
 POST https://www.your-domain.com/integration/orderingsystem
 ```
-with the payload found in [orders.json](./payload/orders.json)
+with the payload found in [examples](./payload/json/)
 
 
 
@@ -59,7 +59,7 @@ We will call
  ```
 POST https://www.your-domain.com/integration/orderingsystem
 ```
-with the payload found in [orders.xml](./payload/orders.xml)
+with the payload found in [examples](./payload/xml/)
 
 
 Poll (Local system)

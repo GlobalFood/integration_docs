@@ -172,7 +172,7 @@ The fields of an order item are:
 |id               |integer|       order item id|
 |name             |string|        order item name |
 |instructions     |string or null|   order item instructions|
-|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item)|
+|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item) <br>- 'promo_cart_item' - item promotion depending on cart value (which applies to items, when certain card conditions are met, like a minimum cart value)|
 |type_id          |integer or null|  id of the original menu item or promotion used to create the order item; it's null for 'delivery_fee' and 'tip'|
 |parent_id        |integer or null|  usually null except if the id of the parent order item has the following two conditions: item is of type 'item' and it belongs to another item of type 'promo_item'|
 |total_item_price |float|         total price of the item taking into account quantity and options. In case type is 'promo_item' then it uses the child order items. In any case it does not include discounts|
