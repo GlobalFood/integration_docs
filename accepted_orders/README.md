@@ -136,11 +136,14 @@ The fields of an order are:
 |id                   |integer|      order id|
 |api_version          |integer|      version of the accepted orders api|
 |type                 |string|       'pickup' or 'delivery' or 'table_reservation' or 'order_ahead'|
+|status               |string|       'accepted' or 'rejected' or 'timed_out' or 'pending'|
+|missed_reason        |string or null|       null - in case the status is any other than missed<br />'NO_CONNECTION' - in case the order could not be pushed to the order taking app <br />'TIMED_OUT' -the order was pushed to the order taking app within due time but was not accepted by the staff of the restaurant|
 |persons              |integer|      number of people at table for a table reservation or order ahead; always 0 in case of pickup or delivery|
 |source               |string|       source of the order; can be: <br> 'website' - restaurant website on desktop browser <br> 'mobile_web' - restaurant website on a mobile browser <br> 'facebook' - facebook app <br> 'website_facebook' - facebook share page on a desktop browser <br> 'mobile_web_facebook' - facebook share page on a mobile browser <br> 'android' - android portal app <br> 'android_branded' - android whitelabel app <br> 'ios' - ios portal app <br> 'ios_branded' - ios whitelabel app |
 |payment              |string|       payment method used; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
 |accepted_at          |string|       UTC date string of when the order was accepted|
 |fulfill_at           |string|       UTC date string of when the order will be delivered or picked up|
+|updated_at           |string|       UTC date string of when the order was last modified before sending it|
 |for_later            |boolean|      Flag to signal if the order is for a future specific time(true) or on demand, to be delivered or picked up as soon as possible(false)|
 |instructions         |string or null|  order instructions|
 |restaurant_id        |integer|      restaurant ID|
