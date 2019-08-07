@@ -32,12 +32,15 @@
     <instructions/>
     <currency>EUR</currency>
     <type>delivery</type>
+    <status>accepted</status>
+    <missed_reason/>
     <source>admin</source>
     <pin_skipped>false</pin_skipped>
     <accepted_at>2019-05-29T14:51:52.000Z</accepted_at>
     <tax_type>GROSS</tax_type>
     <tax_name>VAT</tax_name>
     <fulfill_at>2019-05-29T15:46:52.000Z</fulfill_at>
+    <updated_at>2019-05-29T15:46:52.000Z</updated_at>
     <reference/>
     <restaurant_id>195</restaurant_id>
     <client_id>756</client_id>
