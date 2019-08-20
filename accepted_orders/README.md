@@ -188,7 +188,7 @@ The fields of an aggregated tax are:
 
 |Field|Type|Description|
 |---|---|---|
-|type         |string|        type of aggregated tax; can be: <br>- 'item' - taxes for menu items <br>- 'delivery_fee' - taxes for the delivery fee <br>- 'tip' - taxes for the tip |
+|type         |string|        type of aggregated tax; can be: <br>- 'item' - taxes for menu items <br>- 'delivery_fee' - taxes for the delivery fee <br>- 'tip' - taxes for the tip<br>- 'fees_discounts_subtotal' - taxes for the sum of service fees and cash discounts applied to the shopping cart value (sub-total)<br>- 'service_fee_total' - taxes for the sum of service fees applied to the total order value |
 |value        |float|         value of the taxes |
 |rate         |float|         rate used to calculate taxes |
 
@@ -202,8 +202,8 @@ The fields of an order item are:
 |id               |integer|       order item id|
 |name             |string|        order item name |
 |instructions     |string or null|   order item instructions|
-|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item) <br> - 'promo_cart_item' - item promotion depending on cart value (which applies to items, when certain card conditions are met, like a minimum cart value) |
-|type_id          |integer or null|  id of the original menu item or promotion used to create the order item; it's null for 'delivery_fee' and 'tip'|
+|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item) <br> - 'promo_cart_item' - item promotion depending on cart value (which applies to items, when certain card conditions are met, like a minimum cart value)<br> - 'service_fee_subtotal' - a service fee that is applied to the shopping cart value (sub-total)<br> - 'service_fee_total' - a service fee that is applied to the total value of the order placed<br> - 'cash_discount' - a cash discount offered for a service fee due to cash payment |
+|type_id          |integer or null|  id of the original menu item or promotion used to create the order item; it's null for 'delivery_fee' and 'tip'; for service fees it is the id of the service_fee_* in the system; for cash_discount it is the id of the service_fee_subtotal item that it discounts|
 |parent_id        |integer or null|  usually null except if the id of the parent order item has the following two conditions: item is of type 'item' and it belongs to another item of type 'promo_item'|
 |total_item_price |float|         total price of the item taking into account quantity and options. In case type is 'promo_item' then it uses the child order items. In any case it does not include discounts|
 |tax_type         |string|        (DEPRECATED: use order.tax_list) how taxation is applied, can be either 'NET' or 'GROSS'|

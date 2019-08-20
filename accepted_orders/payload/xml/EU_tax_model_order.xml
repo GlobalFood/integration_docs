@@ -17,6 +17,16 @@
       <value>4.37</value>
       <rate>0.19</rate>
     </tax_list>
+    <tax_list>
+      <type>fees_discounts_subtotal</type>
+      <value>1.60</value>
+      <rate>0.19</rate>
+    </tax_list>
+    <tax_list>
+      <type>service_fee_total</type>
+      <value>3.20</value>
+      <rate>0.19</rate>
+    </tax_list>
     <id>6819</id>
     <total_price>41.14</total_price>
     <sub_total_price>27.4</sub_total_price>
@@ -246,6 +256,74 @@
         <type>option</type>
         <type_id>3873</type_id>
       </option>
+    </item>
+    <item>
+      <id>27196</id>
+      <name>Service fee subtotal 1</name>
+      <total_item_price>10</total_item_price>
+      <price>10</price>
+      <quantity>1</quantity>
+      <instructions/>
+      <type>service_fee_subtotal</type>
+      <type_id>123</type_id>
+      <tax_rate>0.19</tax_rate>
+      <tax_value>1.5966</tax_value>
+      <parent_id/>
+      <item_discount>0</item_discount>
+      <cart_discount_rate>0</cart_discount_rate>
+      <cart_discount>0</cart_discount>
+      <tax_type>GROSS</tax_type>
+    </item>
+    <item>
+      <id>27197</id>
+      <name>Service fee subtotal 2</name>
+      <total_item_price>5</total_item_price>
+      <price>5</price>
+      <quantity>1</quantity>
+      <instructions/>
+      <type>service_fee_subtotal</type>
+      <type_id>125</type_id>
+      <tax_rate>0.19</tax_rate>
+      <tax_value>0.7983</tax_value>
+      <parent_id/>
+      <item_discount>0</item_discount>
+      <cart_discount_rate>0</cart_discount_rate>
+      <cart_discount>0</cart_discount>
+      <tax_type>GROSS</tax_type>
+    </item>
+    <item>
+      <id>27198</id>
+      <name>Cash discount</name>
+      <total_item_price>5</total_item_price>
+      <price>-5</price>
+      <quantity>1</quantity>
+      <instructions/>
+      <type>cash_discount</type>
+      <type_id>125</type_id>
+      <tax_rate>0.19</tax_rate>
+      <tax_value>-0.7983</tax_value>
+      <parent_id/>
+      <item_discount>0</item_discount>
+      <cart_discount_rate>0</cart_discount_rate>
+      <cart_discount>0</cart_discount>
+      <tax_type>GROSS</tax_type>
+    </item>
+    <item>
+      <id>27199</id>
+      <name>Service fee total</name>
+      <total_item_price>20</total_item_price>
+      <price>20</price>
+      <quantity>1</quantity>
+      <instructions/>
+      <type>service_fee_total</type>
+      <type_id>124</type_id>
+      <tax_rate>0.19</tax_rate>
+      <tax_value>3.1932</tax_value>
+      <parent_id/>
+      <item_discount>0</item_discount>
+      <cart_discount_rate>0</cart_discount_rate>
+      <cart_discount>0</cart_discount>
+      <tax_type>GROSS</tax_type>
     </item>
   </order>
 </root>
