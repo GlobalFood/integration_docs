@@ -141,9 +141,9 @@ The fields of an order are:
 |persons              |integer|      number of people at table for a table reservation or order ahead; always 0 in case of pickup or delivery|
 |source               |string|       source of the order; can be: <br> 'website' - restaurant website on desktop browser <br> 'mobile_web' - restaurant website on a mobile browser <br> 'facebook' - facebook app <br> 'website_facebook' - facebook share page on a desktop browser <br> 'mobile_web_facebook' - facebook share page on a mobile browser <br> 'android' - android portal app <br> 'android_branded' - android whitelabel app <br> 'ios' - ios portal app <br> 'ios_branded' - ios whitelabel app |
 |payment              |string|       payment method used; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
-|accepted_at          |string|       UTC date string of when the order was accepted|
-|fulfill_at           |string|       UTC date string of when the order will be delivered or picked up|
-|updated_at           |string|       UTC date string of when the order was last modified before sending it|
+|accepted_at          |string|       UTC date string of when the order was accepted. Example 2019-11-20T10:41:49.000Z (Timestamp is always UTC regardless of winter/summertime)|
+|fulfill_at           |string|       UTC date string of when the order will be delivered or picked up. Example 2019-11-20T10:41:49.000Z (Timestamp is always UTC regardless of winter/summertime)|
+|updated_at           |string|       UTC date string of when the order was last modified before sending it. Example 2019-11-20T10:41:49.000Z (Timestamp is always UTC regardless of winter/summertime)|
 |for_later            |boolean|      Flag to signal if the order is for a future specific time(true) or on demand, to be delivered or picked up as soon as possible(false)|
 |instructions         |string or null|  order instructions|
 |restaurant_id        |integer|      restaurant ID|
