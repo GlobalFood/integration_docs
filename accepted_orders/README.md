@@ -140,10 +140,12 @@ The fields of an order are:
 |missed_reason        |string or null|       null - in case the status is any other than missed<br />'NO_CONNECTION' - in case the order could not be pushed to the order taking app <br />'TIMED_OUT' -the order was pushed to the order taking app within due time but was not accepted by the staff of the restaurant|
 |persons              |integer|      number of people at table for a table reservation or order ahead; always 0 in case of pickup or delivery|
 |source               |string|       source of the order; can be: <br> 'website' - restaurant website on desktop browser <br> 'mobile_web' - restaurant website on a mobile browser <br> 'facebook' - facebook app <br> 'website_facebook' - facebook share page on a desktop browser <br> 'mobile_web_facebook' - facebook share page on a mobile browser <br> 'android' - android portal app <br> 'android_branded' - android whitelabel app <br> 'ios' - ios portal app <br> 'ios_branded' - ios whitelabel app |
-|payment              |string|       payment method used; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - card using online payment <br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone|
-|accepted_at          |string|       UTC date string of when the order was accepted|
-|fulfill_at           |string|       UTC date string of when the order will be delivered or picked up|
-|updated_at           |string|       UTC date string of when the order was last modified before sending it|
+|payment              |string|       payment method used; can be: <br> 'CASH' - cash at the register <br> 'ONLINE' - online payment with card / PayPal / iDEAL / ApplePay / G-Pay<br> 'CARD' - card at the register <br> 'CARD_PHONE' - card details by phone <br> 'Bit' - popular in Israel (restaurant is responsible to facilitate payment) <br> 'Cartão refeição/alimentação' - popular in Brasil (restaurant is responsible to facilitate payment) <br> 'PayLah' - popular in Singapore (restaurant is responsible to facilitate payment) <br> 'Paynow' - popular in Singapore (restaurant is responsible to facilitate payment) <br> 'Picpay' - popular in Brasil (restaurant is responsible to facilitate payment) <br> 'SnapScan' - popular in South Africa (restaurant is responsible to facilitate payment) <br> 'Zapper' - popular in South Africa (restaurant is responsible to facilitate payment)|
+|gateway_type         |string|       In case payment is 'ONLINE' this field contains the payment gateway name (e.g. 'stripe', 'braintree', 'paypal'.|
+|gateway_transaction_id|string|       In case payment is 'ONLINE' this field contains the payment transaction ID assigned by the payment gateway.|
+|accepted_at          |string|       UTC date string of when the order was accepted. Example 2019-11-20T10:41:49.000Z (Timestamp is always UTC regardless of winter/summertime)|
+|fulfill_at           |string|       UTC date string of when the order will be delivered or picked up. Example 2019-11-20T10:41:49.000Z (Timestamp is always UTC regardless of winter/summertime)|
+|updated_at           |string|       UTC date string of when the order was last modified before sending it. Example 2019-11-20T10:41:49.000Z (Timestamp is always UTC regardless of winter/summertime)|
 |for_later            |boolean|      Flag to signal if the order is for a future specific time(true) or on demand, to be delivered or picked up as soon as possible(false)|
 |instructions         |string or null|  order instructions|
 |restaurant_id        |integer|      restaurant ID|
@@ -188,7 +190,7 @@ The fields of an aggregated tax are:
 
 |Field|Type|Description|
 |---|---|---|
-|type         |string|        type of aggregated tax; can be: <br>- 'item' - taxes for menu items <br>- 'delivery_fee' - taxes for the delivery fee <br>- 'tip' - taxes for the tip |
+|type         |string|        type of aggregated tax; can be: <br>- 'item' - taxes for menu items <br>- 'delivery_fee' - taxes for the delivery fee <br>- 'tip' - taxes for the tip<br>- 'fees_discounts_subtotal' - taxes for the sum of service fees and cash discounts applied to the shopping cart value (sub-total)<br>- 'service_fee_total' - taxes for the sum of service fees applied to the total order value |
 |value        |float|         value of the taxes |
 |rate         |float|         rate used to calculate taxes |
 
@@ -202,8 +204,8 @@ The fields of an order item are:
 |id               |integer|       order item id|
 |name             |string|        order item name |
 |instructions     |string or null|   order item instructions|
-|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item) <br> - 'promo_cart_item' - item promotion depending on cart value (which applies to items, when certain card conditions are met, like a minimum cart value) |
-|type_id          |integer or null|  id of the original menu item or promotion used to create the order item; it's null for 'delivery_fee' and 'tip'|
+|type             |string|        type of order item; can be: <br>- 'item' - item on the menu <br>- 'delivery_fee' - the delivery fee <br>- 'tip' - the tip <br>- 'promo_cart' - cart promotion (which applies to the entire cart, like discount on the cart total) <br> - 'promo_item' - item promotion (which applies to child items, that have parent_id equal to the id of this item) <br> - 'promo_cart_item' - item promotion depending on cart value (which applies to items, when certain card conditions are met, like a minimum cart value)<br> - 'service_fee_subtotal' - a service fee that is applied to the shopping cart value (sub-total)<br> - 'service_fee_total' - a service fee that is applied to the total value of the order placed<br> - 'cash_discount' - a cash discount offered for a service fee due to cash payment |
+|type_id          |integer or null|  id of the original menu item or promotion used to create the order item; can be: <br> - 'tip' - null <br>- promo 'specialty_fee' / 'surcharge' - null <br>- 'delivery_fee' - id of the delivery_zone or null for orders outside the delivery zones <br>- 'service_fee' - id of the service_fee_* in the system <br>- 'cash_discount' - id of the service_fee_subtotal item that it discounts|
 |parent_id        |integer or null|  usually null except if the id of the parent order item has the following two conditions: item is of type 'item' and it belongs to another item of type 'promo_item'|
 |total_item_price |float|         total price of the item taking into account quantity and options. In case type is 'promo_item' then it uses the child order items. In any case it does not include discounts|
 |tax_type         |string|        (DEPRECATED: use order.tax_list) how taxation is applied, can be either 'NET' or 'GROSS'|
