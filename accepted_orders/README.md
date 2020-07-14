@@ -236,4 +236,4 @@ The fields of an item option are:
 |quantity         |integer|       quantity of the item option|
 |price            |float|         base price of the item option, does not use quantity|
 
-NOTE: We no longer update the version 1 documentation. To make use of newer features please upgrade to Version 2. For the deprecated Version 1 documentation, you can go [here](./version_1/README.md). 
+NOTE: We no longer update the version 1 documentation. To make use of newer features please upgrade to Version 2. For the deprecated Version 1 documentation, you can go [here](./version_1/README.md). From time to time we add new fields. We recommend you ignore unknown fields.
