@@ -73,6 +73,8 @@
       "api_version": 2,
       "payment": "ONLINE",
       "for_later": false,
+      "fulfillment_option": null,
+      "client_marketing_consent": true,
       "client_address": "Main street 5, Dublin",
       "client_address_parts": {
         "street": "Main street 5",

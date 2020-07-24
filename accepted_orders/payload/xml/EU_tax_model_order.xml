@@ -70,6 +70,8 @@
     <api_version>2</api_version>
     <payment>ONLINE</payment>
     <for_later>false</for_later>
+    <fulfillment_option>null</fulfillment_option>
+    <client_marketing_consent>true</client_marketing_consent>
     <client_address>Main street 5, Dublin</client_address>
     <client_address_parts>
       <street>Main street 5</street>
