@@ -46,7 +46,7 @@ Menu fields
 -----------
 
 **DISCLAIMER:**
-Results may contain some fields which are not documented here. This means that they are deprecated or only used internally. They are in the process of being removed from the Accepted Orders API. The last section includes a list of relevant fields so please expect and store only those.
+Results may contain some fields which are not documented here. This means that they are deprecated or only used internally. They are in the process of being removed from the Fetch Menu API. The last section includes a list of relevant fields so please expect and store only those.
 
 ### Menus
 
@@ -68,7 +68,6 @@ The fields of a category are:
 |---|---|---|
 |id     |integer|     id of the menu|
 |name   |string|      name of the category|
-|sort   |integer|     sorting order of the category; default is 0|
 |items  |array of menu items|  list of the menu items linked with the category; can be empty|
 |groups |array of option groups|  list of the option groups linked with the category; can be empty|
 
@@ -83,7 +82,6 @@ The fields of an item are:
 |name          |string|      name of the item|
 |description   |string|      description of the item |
 |price         |float|       price of the item|
-|sort          |integer|     sorting order of the item; default is 0|
 |sizes  |array of sizes|  list of the sizes that the item comes in; can be empty|
 |groups |array of option groups|  list of the option groups linked with the item; can be empty|
 
@@ -129,4 +127,3 @@ The fields of an option are:
 
 NOTES: 
 * The key generated using the  "Fetch Menu" template doesn't grant you access to the Accepted Orders API. More details of how to get an order once it was accepted [here](../accepted_orders/README.md). 
-* We no longer update the version 1 documentation. To make use of newer features please upgrade to Version 2. For the deprecated Version 1 documentation, you can go [here](../accepted_orders/version_1/README.md). 
