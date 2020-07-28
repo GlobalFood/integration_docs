@@ -80,7 +80,7 @@ curl "https://pos.globalfoodsoft.com/pos/order/pop" \
    -H "Glf-Api-Version: 1"
 ```
 
-See [examples](./payload/json/) for response payload
+See [examples](./payload/orders.json) for response payload
 
 
 ### Example using XML
@@ -92,7 +92,7 @@ curl "https://pos.globalfoodsoft.com/pos/order/pop" \
    -H "Glf-Api-Version: 1"
 ```
 
-See [examples](./payload/xml/) for response payload
+See [examples](./payload/orders.xml) for response payload
 
 
 Order fields
