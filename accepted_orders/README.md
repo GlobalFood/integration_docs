@@ -135,7 +135,7 @@ The fields of an order are:
 |---|---|---|
 |id                   |integer|      order id|
 |api_version          |integer|      version of the accepted orders api|
-|type                 |string|       'pickup' or 'delivery' or 'table_reservation' or 'order_ahead'|
+|type                 |string|       'pickup' or 'delivery' or 'table_reservation' or 'order_ahead' or 'dine_in'|
 |status               |string|       'accepted' or 'rejected' or 'timed_out' or 'pending'|
 |missed_reason        |string or null|       null - in case the status is any other than missed<br />'NO_CONNECTION' - in case the order could not be pushed to the order taking app <br />'TIMED_OUT' -the order was pushed to the order taking app within due time but was not accepted by the staff of the restaurant|
 |persons              |integer|      number of people at table for a table reservation or order ahead; always 0 in case of pickup or delivery|
@@ -172,6 +172,7 @@ The fields of an order are:
 |client_address_parts |object or null|     client delivery address components; it's null when order is pickup; can contain the following components: <br> - street <br> - bloc <br> - floor <br> - apartment <br> - intercom <br> - more_address (in case extended address is not enabled) <br> - zipcode <br> - city <br> - full_address (legacy orders)
 |client_marketing_consent   |boolean|     false - this means the food-client did not give consent to receive marketing related communication from this restaurant regarding similar products<br> true - this means the food-client gave consent to receive marketing related communication from this restaurant regarding similar products|
 |fulfillment_option   |string or null|     'in_person' <br> 'meet_rider' <br> 'no_contact' <br> 'at_counter' <br> 'outside_venue' <br> 'curbside_pickup' <br> null - in case the option is not being used|
+|table_number         |string or null|     Used for Dine-in orders|
 |client_language      |string|     Language the food client used when placing this order. (ISO 639-1 format) |
 |integration_payment_provider      |string or null|     Only used when an "Payment tab API" integration is enabled. Acronym field is passed along here, which was added in the restaurant admin panel when setting up the integration. |
 |integration_payment_amount      |float|     Amount used when an "Payment tab API" integration is enabled. Default is 0 even when there is no integration set. |
