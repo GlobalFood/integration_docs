@@ -76,15 +76,15 @@ The fields of a category are:
 
 The fields of an item are:
 
-|Field|Type|Description|
-|---|---|---|
-|id            |integer|     id of the item|
-|name          |string|      name of the item|
-|description   |string|      description of the item |
-|price         |float|       price of the item|
-|sizes  |array of sizes|  list of the sizes that the item comes in; can be empty|
-|groups |array of option groups|  list of the option groups linked with the item; can be empty|
-|tags |`null` or array of strings|  the list of possible string values inside the list are "HOT", "VEGETARIAN", "VEGAN", "GLUTEN_FREE", "HALAL", "NUT_FREE", "DAIRY_FREE", "RAW"; the `null` value will appear if the item has never had any tags set, otherwise it's always an array
+|Field| Type                      |Description|
+|---|---------------------------|---|
+|id            | integer                   |     id of the item|
+|name          | string                    |      name of the item|
+|description   | string                    |      description of the item |
+|price         | float                     |       price of the item|
+|sizes  | array of sizes            |  list of the sizes that the item comes in; can be empty|
+|groups | array of option groups    |  list of the option groups linked with the item; can be empty|
+|tags | array of strings or `null` |  the list of possible string values inside the list are "HOT", "VEGETARIAN", "VEGAN", "GLUTEN_FREE", "HALAL", "NUT_FREE", "DAIRY_FREE", "RAW"; the `null` value will appear if the item has never had any tags set, otherwise it's always an array
 
 
 ### Sizes
