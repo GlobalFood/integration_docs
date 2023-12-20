@@ -59,6 +59,8 @@
       "client_id": 756,
       "restaurant_phone": "+12126871145",
       "restaurant_timezone": "America/New_York",
+      "delivery_zone_name": "Zone 1",
+      "outside_delivery_area": null,
       "company_account_id": 100195,
       "pos_system_id": 28,
       "restaurant_key": "bvvZ3913t1cJRf8HA5OxvO2FjiSmExSly",
