@@ -41,6 +41,7 @@
       "client_last_name": "Doe",
       "client_email": "john.doe@gmail.com",
       "client_phone": "+12126871225",
+      "client_order_count": 3,
       "restaurant_name": "Pronto",
       "instructions": "Please call when you arrive at the gate",
       "currency": "USD",
