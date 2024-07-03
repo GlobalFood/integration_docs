@@ -38,6 +38,7 @@
     <client_last_name>Doe</client_last_name>
     <client_email>john.doe@gmail.com</client_email>
     <client_phone>+12126871225</client_phone>
+    <client_order_count>3</client_order_count>
     <restaurant_name>Pronto</restaurant_name>
     <instructions>Please call when you arrive at the gate</instructions>
     <currency>USD</currency>
