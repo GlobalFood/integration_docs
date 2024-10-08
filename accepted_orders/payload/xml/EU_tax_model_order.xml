@@ -80,6 +80,11 @@
       <street>Main street 5</street>
       <city>Dublin</city>
     </client_address_parts>
+    <delivery_by_distance>
+      <distance>5</distance>
+      <unit>km</unit>
+      <delivery_fee>2</delivery_fee>
+    </delivery_by_distance>
     <item>
       <id>27187</id>
       <name>DELIVERY_FEE</name>
