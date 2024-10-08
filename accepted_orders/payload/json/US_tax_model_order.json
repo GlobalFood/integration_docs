@@ -83,6 +83,11 @@
         "street": "Park avenue 121",
         "city": "Manhattan"
       },
+      "delivery_by_distance": {
+        "distance": 5,
+        "unit": "mile",
+        "delivery_fee": 2
+      },
       "items": [
         {
           "id": 27160,

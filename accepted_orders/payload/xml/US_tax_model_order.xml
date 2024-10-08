@@ -80,6 +80,11 @@
       <street>Park avenue 121</street>
       <city>Manhattan</city>
     </client_address_parts>
+    <delivery_by_distance>
+      <distance>5</distance>
+      <unit>mile</unit>
+      <delivery_fee>2</delivery_fee>
+    </delivery_by_distance>
     <item>
       <id>27160</id>
       <name>DELIVERY_FEE</name>
