@@ -101,6 +101,7 @@
       <cart_discount_rate>0</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27161</id>
@@ -118,6 +119,7 @@
       <cart_discount_rate>0</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>GROSS</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27162</id>
@@ -135,6 +137,7 @@
       <cart_discount_rate>0.0947</cart_discount_rate>
       <cart_discount>3.86</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name>Pizza Margherita Internal Name</kitchen_internal_name>
       <option>
         <id>20085</id>
         <name>Large</name>
@@ -143,6 +146,7 @@
         <quantity>1</quantity>
         <type>size</type>
         <type_id>798</type_id>
+        <kitchen_internal_name/>
       </option>
       <option>
         <id>20086</id>
@@ -152,6 +156,7 @@
         <quantity>1</quantity>
         <type>option</type>
         <type_id>1187</type_id>
+        <kitchen_internal_name>Extra mozzarella Internal Name</kitchen_internal_name>
       </option>
     </item>
     <item>
@@ -171,6 +176,7 @@
       <cart_discount>-5</cart_discount>
       <tax_type>NET</tax_type>
       <coupon>MQGTLWWLGQRE</coupon>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27164</id>
@@ -188,6 +194,7 @@
       <cart_discount_rate>0.0947</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27165</id>
@@ -205,6 +212,7 @@
       <cart_discount_rate>0.0947</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27166</id>
@@ -223,6 +231,7 @@
       <cart_discount>1.14</cart_discount>
       <tax_type>NET</tax_type>
       <coupon>9VKHM77MZ434</coupon>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27167</id>
@@ -240,6 +249,7 @@
       <cart_discount_rate>0.0947</cart_discount_rate>
       <cart_discount>1.14</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27168</id>
@@ -257,6 +267,7 @@
       <cart_discount_rate>0.0947</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
       <option>
         <id>20087</id>
         <name>Cola light</name>
@@ -265,6 +276,7 @@
         <quantity>1</quantity>
         <type>option</type>
         <type_id>3873</type_id>
+        <kitchen_internal_name/>
       </option>
     </item>
     <item>
@@ -283,6 +295,7 @@
       <cart_discount_rate>0</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27197</id>
@@ -300,6 +313,7 @@
       <cart_discount_rate>0</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27198</id>
@@ -317,6 +331,7 @@
       <cart_discount_rate>0</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
     <item>
       <id>27199</id>
@@ -334,6 +349,7 @@
       <cart_discount_rate>0</cart_discount_rate>
       <cart_discount>0</cart_discount>
       <tax_type>NET</tax_type>
+      <kitchen_internal_name/>
     </item>
   </order>
 </root>

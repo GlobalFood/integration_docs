@@ -235,6 +235,7 @@ The fields of an order item are:
 |cart_discount_rate  |float|      rate used to apply all of the cart promotions; if you have multiple cart promotions (type is 'promo_cart) then their rates are added up here|
 |options          |array of item options| list of item options like sizes, toppings or addons|
 |coupon           |string|        in case item is 'promo_cart' or 'promo_item' this is the coupon code of the promotion |
+|kitchen_internal_name     |string or null| order item internal name to be used on kitchen tickets, if available |
 
 
 
@@ -251,5 +252,6 @@ The fields of an item option are:
 |type_id          |integer|       id of the original option or size used to create the order option|
 |quantity         |integer|       quantity of the item option|
 |price            |float|         base price of the item option, does not use quantity|
+|kitchen_internal_name|string or null| item option internal name to be used on kitchen tickets, if available|
 
 NOTE: We no longer update the version 1 documentation. To make use of newer features please upgrade to Version 2. For the deprecated Version 1 documentation, you can go [here](./version_1/README.md). From time to time we add new fields. We recommend you ignore unknown fields.
