@@ -52,6 +52,33 @@
                         <default>false</default>
                     </option>
                 </group>
+                <extras>
+                    <menu_item_nutritional_value>
+                        <id>9</id>
+                        <value>123</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>10</id>
+                        <value>12</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>11</id>
+                        <value>12</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>12</id>
+                        <value>12</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>13</id>
+                        <value>12</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>14</id>
+                        <value>12</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value_size>per_100g</menu_item_nutritional_value_size>
+                </extras>
             </sizes>
             <sizes>
                 <id>37087</id>
@@ -82,6 +109,33 @@
                         <default>false</default>
                     </option>
                 </group>
+                <extras>
+                    <menu_item_nutritional_value>
+                        <id>9</id>
+                        <value>323</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>10</id>
+                        <value>32</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>11</id>
+                        <value>32</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>12</id>
+                        <value>32</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>13</id>
+                        <value>32</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value>
+                        <id>14</id>
+                        <value>32</value>
+                    </menu_item_nutritional_value>
+                    <menu_item_nutritional_value_size>per_100g</menu_item_nutritional_value_size>
+                </extras>
             </sizes>
         </item>
         <item>
@@ -202,6 +256,34 @@
             <active_end/>
             <active_days>127</active_days>
             <sort>0</sort>
+            <extras>
+                <sku></sku>
+                <menu_item_allergens_id>1</menu_item_allergens_id>
+                <menu_item_allergens_id>3</menu_item_allergens_id>
+                <menu_item_allergens_id>7</menu_item_allergens_id>
+                <menu_item_allergens_id>8</menu_item_allergens_id>
+                <menu_item_allergens_id>4</menu_item_allergens_id>
+                <menu_item_allergens_value>
+                    <id>1</id>
+                    <name>Milk</name>
+                </menu_item_allergens_value>
+                <menu_item_allergens_value>
+                    <id>3</id>
+                    <name>Eggs</name>
+                </menu_item_allergens_value>
+                <menu_item_allergens_value>
+                    <id>7</id>
+                    <name>Shellfish</name>
+                </menu_item_allergens_value>
+                <menu_item_allergens_value>
+                    <id>8</id>
+                    <name>Soybeans</name>
+                </menu_item_allergens_value>
+                <menu_item_allergens_value>
+                    <id>4</id>
+                    <name>Peanuts</name>
+                </menu_item_allergens_value>
+            </extras>
         </item>
         <item>
             <id>58427</id>
