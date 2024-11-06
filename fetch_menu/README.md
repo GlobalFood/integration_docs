@@ -85,6 +85,22 @@ The fields of an item are:
 |sizes  | array of sizes            |  list of the sizes that the item comes in; can be empty|
 |groups | array of option groups    |  list of the option groups linked with the item; can be empty|
 |tags | array of strings or `null` |  the list of possible string values inside the list are "HOT", "VEGETARIAN", "VEGAN", "GLUTEN_FREE", "HALAL", "NUT_FREE", "DAIRY_FREE", "RAW"; the `null` value will appear if the item has never had any tags set, otherwise it's always an array
+|extras | object | See description bellow|
+
+#### Extras
+
+The extras object contains information for the Allergens and Nutritional values. Extras can be placed under an item or a size. The size will only contain nutritional values, while the item can contain both, nutritional values and allergens.
+
+##### Allergens
+
+The Allergens will have two implementations right now. 
+- menu_item_allergens_ids: The first one is an array of internal IDs for the allergens that has been deprecated and will be eliminated next year.
+- menu_item_allergens_values: The seconds one is an array of objects that contain the internal id and the name of the allergen.
+
+##### Nutritional Values
+
+- menu_item_nutritional_values: This is an array of objects that contain the internal id of the nutritional value and the name of the nutritional value.
+
 
 
 ### Sizes
