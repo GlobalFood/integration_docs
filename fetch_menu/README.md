@@ -89,7 +89,7 @@ The fields of an item are:
 
 #### Extras
 
-The extras object contains information for the Allergens and Nutritional values. Extras can be placed under an item or a size. The size will only contain nutritional values, while the item can contain both, nutritional values and allergens.
+The extras object contains information for [Allergens](#allergens), [Nutritional values](#nutritional-values), [Order Types](#order-types) and [Kitchen Internal Name](#kitchen-internal-name).
 
 ##### Allergens
 
@@ -101,6 +101,13 @@ The Allergens will have two implementations right now.
 
 - menu_item_nutritional_values: This is an array of objects that contain the internal id of the nutritional value and the name of the nutritional value.
 
+##### Order Types
+
+- menu_item_order_types: An array of strings with the order types in which the item is available. If this field does not exist or is null, the item is available for all order types. 
+
+##### Kitchen Internal Name
+    
+- menu_item_kitchen_internal_name: A string with the internal name to be used on kitchen tickets, if available.
 
 
 ### Sizes
@@ -115,7 +122,12 @@ The fields of a size are:
 |price         |float|       price of the item|
 |default       |boolean|     if this size is the default size|
 |groups |array of option groups|  list of the option groups linked with the size; can be empty|
+|extras | object | See description bellow|
 
+#### Extras
+
+The extras object contains information on [Nutritional values](#nutritional-values).
+Details on Nutritional values can be found in [Items / Extras / Nutritional Values](#nutritional-values)
 
 ### Option Groups
 
@@ -141,6 +153,13 @@ The fields of an option are:
 |name          |string|      name of the option|
 |price         |float|       price of the option|
 |default       |boolean|     if this option is the default option inside the group|
+|extras | object | See description bellow|
+
+#### Extras
+
+The extras object contains information on [Kitchen Internal Name](#kitchen-internal-name).
+Details on Kitchen Internal Name can be found in [Items / Extras / Kitchen Internal Name](#kitchen-internal-name).
+Inside options, it uses the key "menu_option_kitchen_internal_name".
 
 NOTES: 
 * The key generated using the  "Fetch Menu" template doesn't grant you access to the Accepted Orders API. More details of how to get an order once it was accepted [here](../accepted_orders/README.md). 

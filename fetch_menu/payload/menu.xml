@@ -23,6 +23,11 @@
             <active_begin/>
             <active_end/>
             <active_days>127</active_days>
+            <extras>
+                <menu_item_order_types>pickup</menu_item_order_types>
+                <menu_item_order_types>delivery</menu_item_order_types>
+                <menu_item_kitchen_internal_name>Pizza Margherita Internal Name</menu_item_kitchen_internal_name>
+            </extras>
             <sizes>
                 <id>37086</id>
                 <menu_item_id>58424</menu_item_id>
@@ -43,6 +48,7 @@
                         <name>Corn</name>
                         <price>0.7</price>
                         <default>false</default>
+                        <extras/>
                     </option>
                     <option>
                         <id>51189</id>
@@ -50,6 +56,9 @@
                         <name>Extra mozzarella</name>
                         <price>1.2</price>
                         <default>false</default>
+                        <extras>
+                            <menu_option_kitchen_internal_name>Extra Mozzarella Internal Name</menu_option_kitchen_internal_name>
+                        </extras>
                     </option>
                 </group>
                 <extras>
@@ -100,6 +109,7 @@
                         <name>Corn</name>
                         <price>1.2</price>
                         <default>false</default>
+                        <extras/>
                     </option>
                     <option>
                         <id>51191</id>
@@ -107,6 +117,7 @@
                         <name>Extra mozzarella</name>
                         <price>1.7</price>
                         <default>false</default>
+                        <extras/>
                     </option>
                 </group>
                 <extras>
@@ -149,6 +160,7 @@
             <active_end/>
             <active_days>127</active_days>
             <sort>0</sort>
+            <extras/>
             <sizes>
                 <id>37088</id>
                 <menu_item_id>58425</menu_item_id>
@@ -169,6 +181,7 @@
                         <name>Corn</name>
                         <price>0.7</price>
                         <default>false</default>
+                        <extras/>
                     </option>
                     <option>
                         <id>51189</id>
@@ -176,6 +189,7 @@
                         <name>Extra mozzarella</name>
                         <price>1.2</price>
                         <default>false</default>
+                        <extras/>
                     </option>
                 </group>
             </sizes>
@@ -199,6 +213,7 @@
                         <name>Corn</name>
                         <price>1.2</price>
                         <default>false</default>
+                        <extras/>
                     </option>
                     <option>
                         <id>51191</id>
@@ -206,6 +221,7 @@
                         <name>Extra mozzarella</name>
                         <price>1.7</price>
                         <default>false</default>
+                        <extras/>
                     </option>
                 </group>
             </sizes>
@@ -225,6 +241,7 @@
                 <name>Fluffy</name>
                 <price>0</price>
                 <default>true</default>
+                <extras/>
             </option>
             <option>
                 <id>51187</id>
@@ -232,6 +249,7 @@
                 <name>Crispy</name>
                 <price>0</price>
                 <default>false</default>
+                <extras/>
             </option>
         </group>
     </category>
@@ -296,6 +314,7 @@
             <active_end/>
             <active_days>127</active_days>
             <sort>0</sort>
+            <extras/>
         </item>
     </category>
 </root>
