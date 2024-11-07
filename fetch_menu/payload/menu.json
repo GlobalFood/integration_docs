@@ -24,6 +24,10 @@
                     "active_begin": null,
                     "active_end": null,
                     "active_days": 127,
+                    "extras": {
+                        "menu_item_order_types": ["pickup", "delivery"],
+                        "menu_item_kitchen_internal_name": "Pizza Margherita Internal Name"
+                    },
                     "sizes": [
                         {
                             "id": 37086,
@@ -46,14 +50,18 @@
                                             "option_group_id": 16978,
                                             "name": "Corn",
                                             "price": 0.7,
-                                            "default": false
+                                            "default": false,
+                                            "extras": null
                                         },
                                         {
                                             "id": 51189,
                                             "option_group_id": 16978,
                                             "name": "Extra mozzarella",
                                             "price": 1.2,
-                                            "default": false
+                                            "default": false,
+                                            "extras": {
+                                                "menu_option_kitchen_internal_name": "Extra Mozzarella Internal Name"
+                                            }
                                         }
                                     ]
                                 }
@@ -80,14 +88,16 @@
                                             "option_group_id": 16979,
                                             "name": "Corn",
                                             "price": 1.2,
-                                            "default": false
+                                            "default": false,
+                                            "extras": null
                                         },
                                         {
                                             "id": 51191,
                                             "option_group_id": 16979,
                                             "name": "Extra mozzarella",
                                             "price": 1.7,
-                                            "default": false
+                                            "default": false,
+                                            "extras": null
                                         }
                                     ]
                                 }
@@ -106,6 +116,7 @@
                     "active_begin": null,
                     "active_end": null,
                     "active_days": 127,
+                    "extras": null,
                     "sizes": [
                         {
                             "id": 37088,
@@ -128,14 +139,16 @@
                                             "option_group_id": 16978,
                                             "name": "Corn",
                                             "price": 0.7,
-                                            "default": false
+                                            "default": false,
+                                            "extras": null
                                         },
                                         {
                                             "id": 51189,
                                             "option_group_id": 16978,
                                             "name": "Extra mozzarella",
                                             "price": 1.2,
-                                            "default": false
+                                            "default": false,
+                                            "extras": null
                                         }
                                     ]
                                 }
@@ -191,14 +204,16 @@
                                             "option_group_id": 16979,
                                             "name": "Corn",
                                             "price": 1.2,
-                                            "default": false
+                                            "default": false,
+                                            "extras": null
                                         },
                                         {
                                             "id": 51191,
                                             "option_group_id": 16979,
                                             "name": "Extra mozzarella",
                                             "price": 1.7,
-                                            "default": false
+                                            "default": false,
+                                            "extras": null
                                         }
                                     ]
                                 }
@@ -252,14 +267,16 @@
                             "option_group_id": 16977,
                             "name": "Fluffy",
                             "price": 0,
-                            "default": true
+                            "default": true,
+                            "extras": null
                         },
                         {
                             "id": 51187,
                             "option_group_id": 16977,
                             "name": "Crispy",
                             "price": 0,
-                            "default": false
+                            "default": false,
+                            "extras": null
                         }
                     ]
                 }
@@ -330,6 +347,7 @@
                     "active_begin": null,
                     "active_end": null,
                     "active_days": 127,
+                    "extras": null,
                     "sizes": [],
                     "groups": []
                 }
