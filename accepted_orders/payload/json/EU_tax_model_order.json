@@ -78,6 +78,7 @@
       "for_later": false,
       "fulfillment_option": null,
       "client_marketing_consent": true,
+      "client_ip_address": "127.0.0.1",
       "client_address": "Main street 5, Dublin",
       "client_address_parts": {
         "street": "Main street 5",

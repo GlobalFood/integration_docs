@@ -78,6 +78,7 @@
       "for_later": false,
       "fulfillment_option": null,
       "client_marketing_consent": true,
+      "client_ip_address": "127.0.0.1",
       "client_address": "Park avenue 121, Manhattan",
       "client_address_parts": {
         "street": "Park avenue 121",
